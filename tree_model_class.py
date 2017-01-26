@@ -9,7 +9,7 @@ class TreeModel:
         Since the last period is not uncertain, it will not a
         complete num_decision_nodes
         """
-        self.decison_times = decision_times
+        self.decision_times = decision_times
         self.sub_interval = sub_interval
         self.prob_scale = prob_scale
 
@@ -53,7 +53,7 @@ class TreeModel:
 
         """
         edges = {}
-        num_subinterval = [ int((y - x)/5) for x,y in zip(self.decison_times[:-1],self.decison_times[1:])]
+        num_subinterval = [ int((y - x)/5) for x,y in zip(self.decision_times[:-1],self.decision_times[1:])]
         for period in range(0,len(num_subinterval)-1):
             for state in range(0, 2**period):
                 pos = 2**period-1 + state
