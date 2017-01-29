@@ -26,6 +26,11 @@ class TreeModel:
         self.final_states_prob = np.zeros(self.num_final_state)
         self.node_prob = np.zeros(self.num_decision_nodes)
 
+        #### emissions
+        self.emissions_per_period = np.zeros(self.num_period)
+        self.emissions_to_ghg = np.zeros(self.num_period)
+
+
         ### Initialize the probability
         self.create_probs()
 
